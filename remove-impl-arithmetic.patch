@@ -1,0 +1,20 @@
+diff --git a/crossbeam-utils/src/atomic/atomic_cell.rs b/crossbeam-utils/src/atomic/atomic_cell.rs
+index cf0658a..f0aaa37 100644
+--- a/crossbeam-utils/src/atomic/atomic_cell.rs
++++ b/crossbeam-utils/src/atomic/atomic_cell.rs
+@@ -284,6 +284,7 @@ impl<T: Copy + Eq> AtomicCell<T> {
+     }
+ }
+ 
++/*
+ macro_rules! impl_arithmetic {
+     ($t:ty, $example:tt) => {
+         impl AtomicCell<$t> {
+@@ -617,6 +618,7 @@ impl AtomicCell<bool> {
+         a.fetch_xor(val, Ordering::AcqRel)
+     }
+ }
++*/
+ 
+ impl<T: Default> Default for AtomicCell<T> {
+     fn default() -> AtomicCell<T> {
