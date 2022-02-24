@@ -23,8 +23,8 @@ then
 	git apply -
 fi
 
-VERSION=$(cargo metadata --no-deps --format-version 1 \
-	| jq -r '.packages[] | select(.name == "crossbeam-utils") | .version')
+# VERSION=$(cargo metadata --no-deps --format-version 1 \
+#	| jq -r '.packages[] | select(.name == "crossbeam-utils") | .version')
 
 cd "${PROJECT_ROOT}"
 CROSSBEAM_UTILS="${TMPDIR}/crossbeam-utils"
